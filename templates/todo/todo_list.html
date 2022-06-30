@@ -10,7 +10,9 @@
     <tbody>
         {% for task in tasks %}
         <tr>
-            <td>{{task.title}}</td>
+            <td>{{ task.title }}</td>
+            <td>{{ task.created }}</td>
+            <td><a href="{% url 'detail' task.pk %}">Detail</a></td>
         </tr>
         {% empty %}
             <h3>No Tasks on the list</h3>
