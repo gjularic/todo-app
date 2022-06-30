@@ -15,6 +15,7 @@
             <td>{{ task.created }}</td>
             <td><a href="{% url 'detail' task.pk %}">Detail</a></td>
             <td><a href="{% url 'update' task.pk %}">Update</a></td>
+            <td><a href="{% url 'delete' task.pk %}">Delete</a></td>
         </tr>
         {% empty %}
             <h3>No Tasks on the list</h3>
