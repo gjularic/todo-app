@@ -14,5 +14,5 @@ class TodoDetail(DetailView):
 
 class TodoCreate(CreateView):
     model = Todo
-    field = '__all__'
+    fields = '__all__'
     success_url = reverse_lazy('list')
