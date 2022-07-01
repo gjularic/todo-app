@@ -10,9 +10,9 @@
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Login" class="btn btn-info">
+        <input type="submit" value="Login" class="btn btn btn-outline-secondary">
         <hr>
-        <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+        <p>Don't have an account? <a class="btn btn-info" href="{% url 'register' %}">Sign Up</a></p>
     </form>
 </div>
 

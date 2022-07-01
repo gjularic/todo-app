@@ -45,3 +45,15 @@ label {
 hr {
     width: 90%;
 }
+
+table td, th {
+    text-align: center; 
+}
+
+h3 {
+    padding: 50px;
+}
+
+.fa-info {
+    color: #fff;
+}
