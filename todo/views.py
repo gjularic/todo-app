@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, \
     UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
@@ -32,6 +32,11 @@ class TodoRegister(FormView):
             login(self.request, user)
         return super(TodoRegister, self).form_valid(form)
 
+    # blocking registered user from seeing the register page again
+    def get(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return redirect('list')
+        return super(TodoRegister, self).get(*args, **kwargs)
 
 
 class TodoList(LoginRequiredMixin, ListView):
