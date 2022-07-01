@@ -20,10 +20,19 @@ class TodoLogin(LoginView):
 
 # Register page
 class TodoRegister(FormView):
-    template_name = 'todo/register'
+    template_name = 'todo/register.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('list')
+
+    # making sure user is logged in and redirected
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(TodoRegister, self).form_valid(form)
+
+
 
 class TodoList(LoginRequiredMixin, ListView):
     model = Todo
