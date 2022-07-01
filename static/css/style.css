@@ -12,7 +12,7 @@ body {
 
 /* Header Bar */
 .header-bar {
-    padding: 8px;
+    padding: 20px;
     color: #fff;
     border-radius: 5px 5px 0 0;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,29,110,1) 0%, rgba(0,212,255,1) 100%);
@@ -36,4 +36,12 @@ textarea {
 label {
     padding-top: 10px !important;
     display: block;
+}
+
+.card {
+    padding: 50px;
+}
+
+hr {
+    width: 90%;
 }
