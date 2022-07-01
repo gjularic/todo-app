@@ -31,7 +31,13 @@
     <tbody>
         {% for task in tasks %}
         <tr class="align-baseline">
-            <td>{{ task.title }}</td>
+            <!-- Check if the task is complete and if it is, strike and make italic -->
+            {% if task.complete %}
+                <td><i><s>{{ task.title }}</s></i></td>
+            {% else %}
+                <td><b>{{ task.title }}</b</td>
+            {% endif %}
+
             <td>{{ task.created }}</td>
             <td><a class="btn btn-info" href="{% url 'detail' task.pk %}"><i class="fas fa-info"></i></a></td>
             <td><a class="btn btn-success" href="{% url 'update' task.pk %}"><i class="fas fa-edit"></i></a></td>
