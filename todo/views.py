@@ -38,6 +38,12 @@ class TodoCreate(LoginRequiredMixin, CreateView):
     fields = '__all__'
     success_url = reverse_lazy('list')
 
+    # override method so that the correct user is
+    # selected and new task can be added for it
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(TodoCreate, self).form_valid(form)
+
 class TodoUpdate(LoginRequiredMixin, UpdateView):
     model = Todo
     fields = '__all__'
