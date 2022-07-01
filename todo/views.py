@@ -1,15 +1,15 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, \
-    UpdateView, DeleteView
+    UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
-
 # restrict the views so that they can only be seen if logged in
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 from .models import Todo
 
-# Create your views here.
+# Login page
 class TodoLogin(LoginView):
     template_name = 'todo/login.html'
     fields = '__all__'
@@ -17,6 +17,13 @@ class TodoLogin(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('list')
+
+# Register page
+class TodoRegister(FormView):
+    template_name = 'todo/register'
+    form_class = UserCreationForm
+    redirect_authenticated_user = True
+    success_url = reverse_lazy('list')
 
 class TodoList(LoginRequiredMixin, ListView):
     model = Todo
