@@ -2,9 +2,18 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, \
     UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
 from .models import Todo
 
 # Create your views here.
+class TodoLogin(LoginView):
+    template_name = 'todo/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self):
+        return reverse_lazy('list')
+
 class TodoList(ListView):
     model = Todo
     context_object_name = 'tasks'
