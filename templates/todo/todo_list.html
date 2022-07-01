@@ -3,6 +3,7 @@
 {% block content %}
 
 <!-- check if user is logged in and display the name -->
+
 {% if request.user.is_authenticated %}
     <p>{{ request.user }}</p>
     <a href="{% url 'logout' %}">Logout</a>
