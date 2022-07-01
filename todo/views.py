@@ -3,6 +3,10 @@ from django.views.generic import ListView, DetailView, CreateView, \
     UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
+
+# restrict the views so that they can only be seen if logged in
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .models import Todo
 
 # Create your views here.
@@ -14,7 +18,7 @@ class TodoLogin(LoginView):
     def get_success_url(self):
         return reverse_lazy('list')
 
-class TodoList(ListView):
+class TodoList(LoginRequiredMixin, ListView):
     model = Todo
     context_object_name = 'tasks'
 
