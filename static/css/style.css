@@ -1,5 +1,5 @@
 body {
-    background-color: #F9F9F9;
+    background-color: #2faee9;
     padding-bottom: 100px;
     font-family: 'Roboto', sans-serif;
 }
@@ -21,4 +21,19 @@ body {
 .header-bar a {
     color: #fff;
     text-decoration: none;
+}
+
+/* Input areas */
+input[type=text],
+input[type=password],
+textarea {
+    border: 1px solid #757575;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+}
+
+label {
+    padding-top: 10px !important;
+    display: block;
 }
