@@ -13,15 +13,20 @@
 </div>
 
 <hr>
-<h1>My Todo List</h1>
-<p>What is your task for today?</p>
-<a href="{% url 'create' %}">New Task</a>
+<div class="p-5">
+    <h1>My Todo List</h1>
+    <p>What is your task for today?</p>
+    <a class="btn btn-primary" href="{% url 'create' %}">New Task</a>
+</div>
 <!-- Table to render out todo list tasks -->
-<table>
+<table class="table table-light">
     <thead>
         <tr>
             <th scope="col">Task</th>
             <th scope="col">Time created</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>

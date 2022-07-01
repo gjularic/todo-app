@@ -17,3 +17,8 @@ body {
     border-radius: 5px 5px 0 0;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,29,110,1) 0%, rgba(0,212,255,1) 100%);
 }
+
+.header-bar a {
+    color: #fff;
+    text-decoration: none;
+}
