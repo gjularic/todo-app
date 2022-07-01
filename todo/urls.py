@@ -3,7 +3,7 @@ from .views import TodoList, TodoDetail, TodoCreate, TodoUpdate, \
     TodoDelete, TodoLogin
 
 urlpatterns = [
-    path('login/', TodoLogin, name="login"),
+    path('login/', TodoLogin.as_view(), name="login"),
     path('', TodoList.as_view(), name="list"),
     path('detail/<int:pk>/', TodoDetail.as_view(), name="detail"),
     path('create/', TodoCreate.as_view(), name="create"),
