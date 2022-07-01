@@ -22,21 +22,21 @@ class TodoList(LoginRequiredMixin, ListView):
     model = Todo
     context_object_name = 'tasks'
 
-class TodoDetail(DetailView):
+class TodoDetail(LoginRequiredMixin, DetailView):
     model = Todo
     context_object_name = 'task'
 
-class TodoCreate(CreateView):
+class TodoCreate(LoginRequiredMixin, CreateView):
     model = Todo
     fields = '__all__'
     success_url = reverse_lazy('list')
 
-class TodoUpdate(UpdateView):
+class TodoUpdate(LoginRequiredMixin, UpdateView):
     model = Todo
     fields = '__all__'
     success_url = reverse_lazy('list')
 
-class TodoDelete(DeleteView):
+class TodoDelete(LoginRequiredMixin, DeleteView):
     model = Todo
     fields = '__all__'
     success_url = reverse_lazy('list')
