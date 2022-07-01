@@ -35,7 +35,7 @@ class TodoDetail(LoginRequiredMixin, DetailView):
 
 class TodoCreate(LoginRequiredMixin, CreateView):
     model = Todo
-    fields = '__all__'
+    fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('list')
 
     # override method so that the correct user is
@@ -46,10 +46,9 @@ class TodoCreate(LoginRequiredMixin, CreateView):
 
 class TodoUpdate(LoginRequiredMixin, UpdateView):
     model = Todo
-    fields = '__all__'
+    fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('list')
 
 class TodoDelete(LoginRequiredMixin, DeleteView):
     model = Todo
-    fields = '__all__'
     success_url = reverse_lazy('list')
