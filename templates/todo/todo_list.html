@@ -2,14 +2,16 @@
 
 {% block content %}
 
-<!-- check if user is logged in and display the name -->
-
+<div class="header-bar d-flex justify-content-between">
+    <h1>Hello {{request.user|title}}</h1>
+    <!-- check if user is logged in and display the name -->
 {% if request.user.is_authenticated %}
-    <p>{{ request.user }}</p>
-    <a href="{% url 'logout' %}">Logout</a>
+<a href="{% url 'logout' %}">Logout</a>
 {% else %}
-    <a href="{% url 'login' %}">Login</a>
+<a href="{% url 'login' %}">Login</a>
 {% endif %}
+</div>
+
 <hr>
 <h1>My Todo List</h1>
 <p>What is your task for today?</p>
@@ -18,7 +20,8 @@
 <table>
     <thead>
         <tr>
-            <th>Task</th>
+            <th scope="col">Task</th>
+            <th scope="col">Time created</th>
         </tr>
     </thead>
     <tbody>
