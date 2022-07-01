@@ -1,3 +1,7 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
 <h1>Todo Detail</h1>
 <a href="{% url 'list' %}">Go Back</a>
 <div>
@@ -5,3 +9,4 @@
     <p>{{ task.created }}</p>
     <p>{{ task.description }}</p>
 </div>
+{% endblock %}
