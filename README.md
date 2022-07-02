@@ -129,3 +129,44 @@
     - To create the wireframes.
 
 ## Requirements file
+
+* asgiref==3.5.2
+* cloudinary==1.25.0
+* dj-database-url==0.5.0
+* dj3-cloudinary-storage==0.0.5
+* Django==3.2.13
+* gunicorn==20.1.0
+* psycopg2==2.9.3
+* pytz==2022.1
+* sqlparse==0.4.2
+
+# Testing (Manual)
+
+## I have tested the full CRUD functionality on the project.
+
+### Users can:
+
+- create tasks by clicking "New Task".
+- update task by clicking on green edit icon.
+- delete the tas by clicking on the red trash icon.
+- view the details of the task and notes.
+- login and register to see or set up their own list.
+
+
+### HTML Validator
+
+![HTML Validations](static/img/html_validator.png)
+
+### CSS-Validator
+
+![CSS Validations](static/img/css_validator.png)
+
+### PEP8
+
+* All PEP8 validations
+![PEP8 Validations]()
+
+
+### Lighthouse Scores
+
+![LightHouse](static/img/lighthouse.png)
