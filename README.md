@@ -86,3 +86,46 @@
 ![Todo List Page](static/img/delete.png)
 
 * The site user can confirm deleting the task through this message
+
+## Database model and wireframe
+
+* Todo List data model
+
+![Data Model Todo](static/img/database.png)
+
+* Wireframe
+
+![Wireframe Todo](static/img/wireframe.png)
+
+# Technology-Used-In-Design
+
+* Django framework
+* HTML5
+* CSS3
+* Python
+    - Used in conjunction with the Django framework to implement the website.
+* Heroku
+    - Use to deploy the project on to the live site.
+
+* [Django](https://docs.djangoproject.com/en/4.0/)
+    - Used to create the URLS, Views, Forms and models in the site.
+* [Bootstrap](https://getbootstrap.com/)
+    - Bootstrap is mainly used to style the page and add responsiveness to the website.
+* [Cloudinary](https://cloudinary.com/)
+    - Cloudinary is used to store the static files.
+* [Google Fonts](https://fonts.google.com/)
+    - Main Fonts for the project
+* [Gitpod](https://www.gitpod.io)
+    - Gitpod is used to write the code
+* [Github](https://github.com/)
+    - Github is being used to store the repository.
+* [Font Awesome](https://fontawesome.com/)
+    - Font awesome is used for the info, update, delete icons.
+* [PostGres](https://www.postgresql.org/download/)
+    - Database used through heroku.
+* [SQLite](https://django-allauth.readthedocs.io/en/latest/)
+    - https://www.sqlite.com/index.html
+* [Balsamiq](https://django-allauth.readthedocs.io/en/latest/)
+    - To create the wireframes.
+
+## Requirements file
