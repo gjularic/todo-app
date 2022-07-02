@@ -9,6 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from .models import Todo
 
+
 # Login page
 class TodoLogin(LoginView):
     template_name = 'todo/login.html'
@@ -17,6 +18,7 @@ class TodoLogin(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('list')
+
 
 # Register page
 class TodoRegister(FormView):
@@ -39,6 +41,7 @@ class TodoRegister(FormView):
         return super(TodoRegister, self).get(*args, **kwargs)
 
 
+# Main page list view
 class TodoList(LoginRequiredMixin, ListView):
     model = Todo
     context_object_name = 'tasks'
@@ -50,10 +53,14 @@ class TodoList(LoginRequiredMixin, ListView):
         context['tasks'] = context['tasks'].filter(user=self.request.user)
         return context
 
+
+# Details page
 class TodoDetail(LoginRequiredMixin, DetailView):
     model = Todo
     context_object_name = 'task'
 
+
+# Create task page
 class TodoCreate(LoginRequiredMixin, CreateView):
     model = Todo
     fields = ['title', 'description', 'complete']
@@ -65,11 +72,15 @@ class TodoCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(TodoCreate, self).form_valid(form)
 
+
+# Update task page
 class TodoUpdate(LoginRequiredMixin, UpdateView):
     model = Todo
     fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('list')
 
+
+# Delete task page
 class TodoDelete(LoginRequiredMixin, DeleteView):
     model = Todo
     success_url = reverse_lazy('list')
