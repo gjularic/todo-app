@@ -7,6 +7,8 @@
 ### About
 * Todo App is a website application designed to help users stay focused and be more organized.
 
+* The live deployed application can be found here [TodoApp](https://mytoodo-app.herokuapp.com/)
+
 # User Experience
 
 ## Project goals
@@ -44,3 +46,43 @@
 ### Delete Tasks
 
 * As a Site User I can delete my own tasks.
+
+# Features
+
+* The first release includes:
+    - A login page to allow users to have their own todo lists.
+    - A register page for new users.
+    - users can log in and add tasks and setup their todo list.
+    - Once logged in a user can update or delete their tasks.
+    - Authentication used to determine who is logged and who can create/update or delete.
+    - users can log out at any time.
+
+### Login page
+![Home Page](static/img/login.png)
+
+* User can open the webpage from the URL provided and will be asked to log in. If they dont have an account there is a "Sign Up" button which will lead them to register page.
+
+### Register page
+![Sign Up Page](static/img/register.png)
+
+* If user doesn't have sign in details already they can register here
+
+### Todo List Page
+![Todo List Page](static/img/home.png)
+
+* The site user can create their own todo list here or select options to view, update and delete teh list items.
+
+### Create/Update page
+![Todo List Page](static/img/create_update.png)
+
+* The site user can create or update their tasks through this form
+
+### Task Details
+![Todo List Page](static/img/task_details.png)
+
+* The site user can view their task info on this page
+
+### Task Details
+![Todo List Page](static/img/delete.png)
+
+* The site user can confirm deleting the task through this message
