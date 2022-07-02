@@ -175,3 +175,66 @@
 ### Lighthouse Scores
 
 ![LightHouse](static/img/lighthouse.png)
+
+# Deployment
+
+### Gitpod and GitHub
+
+Used the [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) to set up the gitpod workspace.
+
+
+### Steps:
+
+* Click create new repository.
+* Give the repository a name.
+* Under Repository template pick the [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+* Click create repository
+- Use GIT ADD .
+- GIT COMMIT -m "Comments"
+- GIT PUSH
+- To commit the code and push to Github
+
+## Forking the Github Repository
+
+- Locate the desired Github repository.
+- In the top right corner click the Fork button.
+- The repository has been forked and you can now work on the copy.
+
+## Cloning a Github repository
+
+- Locate the desired Github repository.
+- Use the code button and copy the link.
+- Open Gitpod and select your directory where you want the clone to be created.
+- Type git clone in the terminal and paste the link in.
+- The clone will be created
+
+
+### Creating and Deploying Application with Heroku
+
+I used the "I Think Therefore I Blog" tutorial provided by The Code Institute to deploy the application on Heroku.
+
+- Log in to Heroku [Heroku](https://dashboard.heroku.com/)
+- Click New 
+- Give the app a name and choose the region
+- Click on settings first and set the Reveal Config Vars
+- Click Deploy at the top to go to the Deployment settings
+- Choose GiHub as the deployment method
+- Search for your app and connect
+- Use Automatic deploys if you would like a new build when changes are pushed to GitHub from Gitpod
+- Use Manual deploy for a new build every time this button is clicked.
+- Once completed click View App
+
+# Credits
+- "Hello Django" and "I Think Therefore Blog" tutorials from Code Institute to get direction, set up the environment, and deploy to Heroku
+- https://ccbv.co.uk/projects/Django/4.0/ for views
+- https://docs.djangoproject.com/en/4.0/ always handy django documentation
+- Slack comunity (got a bit of direction how to fix static files not being recognized by Heroku)
+- StackOwerflow
+- Balsamiq for wireframe
+
+# Issues/Bugs
+
+### Static files were not loading when deployed on Heroku
+
+Fix:
+* Updated requirements.txt file manually with "cloudinary==1.25.0", "dj3-cloudinary-storage==0.0.5"
