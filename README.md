@@ -13,7 +13,7 @@
 
 ## Project goals
 
-* Goal of the project was to show my competency in being able to create a web app using the Django Framework. App needed to be simple enough for someone who also works full time in addition of studying, but still fully learn and implement the CRUD process.
+* Goal of the project was to show my competency in being able to create a web app using the Django Framework. App needed to be simple enough for someone like me who also works full time in addition of studying, but to still fully learn and implement the CRUD process.
 
 * The users of the site will be able to register and login on the page. Once they do that they will be able to create their own task lists, read the details, update them and delete.
 
@@ -70,7 +70,7 @@
 ### Todo List Page
 ![Todo List Page](static/img/home.png)
 
-* The site user can create their own todo list here or select options to view, update and delete teh list items.
+* The site user can create their own todo list here or select options to view, update and delete the list items.
 
 ### Create/Update page
 ![Todo List Page](static/img/create_update.png)
@@ -228,7 +228,7 @@ I used the "I Think Therefore I Blog" tutorial provided by The Code Institute to
 - "Hello Django" and "I Think Therefore Blog" tutorials from Code Institute to get direction, set up the environment, and deploy to Heroku
 - https://ccbv.co.uk/projects/Django/4.0/ for views
 - https://docs.djangoproject.com/en/4.0/ always handy django documentation
-- Slack comunity (got a bit of direction how to fix static files not being recognized by Heroku)
+- Slack community (got a bit of direction how to fix static files not being recognized by Heroku)
 - StackOwerflow
 - Balsamiq for wireframe
 
@@ -238,3 +238,6 @@ I used the "I Think Therefore I Blog" tutorial provided by The Code Institute to
 
 Fix:
 * Updated requirements.txt file manually with "cloudinary==1.25.0", "dj3-cloudinary-storage==0.0.5"
+
+### Small bugs with positioning of the pages
+* it's due to project not having enough styling at the moment
