@@ -161,11 +161,16 @@
 
 ![CSS Validations](static/img/css_validator.png)
 
-### PEP8
+## PEP8
 
-* All PEP8 validations
-![PEP8 Validations]()
+### All PEP8 validations
 
+### Views.py
+![PEP8 Validations](static/img/views_pep8.png)
+### Urls.py
+![PEP8 Validations](static/img/urls_pep8.png)
+### Models.py
+![PEP8 Validations](static/img/models_pep8.png)
 
 ### Lighthouse Scores
 
